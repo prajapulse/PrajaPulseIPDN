@@ -1,0 +1,291 @@
+:root {
+  --primary-color: #0d6efd; /* Bootstrap Blue */
+  --accent-color: #fd7e14; /* Bootstrap Orange */
+  --bg-light: #ffffff;
+  --bg-alt: #f8f9fa;
+  --text-dark: #212529;
+  --text-muted: #6c757d;
+  --border-color: #dee2e6;
+}
+
+body {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+}
+
+/* Navigasi */
+.navbar {
+  background-color: var(--bg-light) !important;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  color: var(--text-dark) !important;
+}
+
+.navbar-brand span {
+  color: var(--primary-color);
+}
+
+.navbar-logo {
+  height: 40px;
+  width: auto;
+  border-radius: 4px;
+  mix-blend-mode: multiply; /* Mencoba menghilangkan background putih jika ada */
+}
+
+.nav-link {
+  color: var(--text-dark) !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Bagian Hero */
+.hero-section {
+  padding: 140px 0 80px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero-desc-wrapper {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-left: 5px solid var(--primary-color);
+  padding: 20px 25px;
+  border-radius: 0 15px 15px 0;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.hero-desc-wrapper p {
+  margin-bottom: 0;
+  color: #495057;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.product-info {
+  padding: 1.5rem 1rem;
+  background: #212529;
+}
+
+.product-card {
+  margin-bottom: 30px; /* Tambah jarak antar produk */
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-info h5 {
+  color: #ffffff !important;
+}
+
+.product-info p {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.price {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Gaya Formulir */
+.card {
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.form-control,
+.form-select {
+  border: 1px solid var(--border-color);
+  padding: 0.6rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  font-weight: 600;
+}
+
+footer {
+  background-color: var(--bg-alt);
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 0;
+}
+
+footer span {
+  color: var(--primary-color);
+}
+
+/* Gaya Fitur Keranjang */
+.cart-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(13, 110, 253, 0.3);
+  z-index: 1050;
+  transition: transform 0.3s ease;
+}
+
+.cart-btn:hover {
+  transform: scale(1.1);
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--bg-light);
+}
+
+.cart-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.cart-item-img {
+  width: 60px;
+  height: 60px;
+  background: #eee;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Peningkatan Responsif */
+@media (max-width: 991px) {
+  .hero-section {
+    padding: 100px 0 60px 0;
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 2.75rem;
+  }
+  .navbar {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  .product-image {
+    height: 200px;
+  }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .card {
+    padding: 1.5rem !important;
+  }
+}
+/* Tombol WhatsApp CS */
+.whatsapp-cs-btn {
+  position: fixed !important;
+  bottom: 100px !important;
+  right: 30px !important;
+  width: 60px !important;
+  height: 60px !important;
+  background-color: #25d366 !important;
+  color: white !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.8rem !important;
+  cursor: pointer !important;
+  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3) !important;
+  z-index: 9999 !important;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  text-decoration: none !important;
+}
+
+.whatsapp-cs-btn:hover {
+  transform: scale(1.1) rotate(5deg);
+  color: white;
+  box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+}
+
+.cs-tooltip {
+  position: absolute;
+  right: 75px;
+  background: #212529;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-cs-btn:hover .cs-tooltip {
+  opacity: 1;
+  visibility: visible;
+  right: 80px;
+}
+
+@media (max-width: 576px) {
+  .whatsapp-cs-btn {
+    bottom: 90px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  .cart-btn {
+    bottom: 25px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+}
